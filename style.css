@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f9;
+    padding: 20px;
+    margin: 0;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+p {
+    color: #666;
+    font-size: 14px;
+}
+
+.converter-module {
+    background: #fff;
+    padding: 15px; /* 减小内边距 */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 15px; /* 减小外边距 */
+    text-align: left;
+}
+
+h2 {
+    color: #007BFF;
+    margin-top: 0;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 8px; /* 减小标题下方的内边距 */
+    font-size: 18px; /* 可选：减小标题字体大小 */
+}
+
+.converter-row {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 30px 1.5fr 2fr;
+    gap: 8px; /* 减小元素之间的间距 */
+    align-items: center;
+    margin-top: 10px; /* 减小与标题的间距 */
+}
+
+.inputValue, .inputUnit, .outputUnit {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+}
+
+.equals-sign {
+    font-size: 20px; /* 减小字体大小 */
+    color: #555;
+    margin: 0;
+}
+
+.result-box {
+    padding: 8px 12px; /* 减小内边距 */
+    min-width: 60px; /* 减小最小宽度 */
+    text-align: center;
+    background-color: #e6f7e9;
+    border: 2px solid #28a745;
+    border-radius: 5px;
+}
+.resultValue {
+    font-size: 20px; /* 减小字体大小 */
+    color: #28a745;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* --- 媒体查询：小屏幕下的换行和顺序 --- */
+@media (max-width: 600px) {
+    .converter-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px; /* 减小间距 */
+    }
+    .inputValue, .inputUnit, .outputUnit, .result-box, .equals-sign {
+        width: 100%;
+        margin-bottom: 8px; /* 减小间距 */
+    }
+    .inputValue {
+        order: 1;
+    }
+    .inputUnit {
+        order: 2;
+    }
+    .equals-sign {
+        order: 3;
+        text-align: center;
+    }
+    .result-box {
+        order: 4;
+    }
+    .outputUnit {
+        order: 5;
+        margin-bottom: 0;
+    }
+    .inputValue, .inputUnit, .outputUnit {
+        flex-grow: 1;
+        min-width: unset;
+        padding: 8px; /* 保持小屏幕下的内边距一致 */
+    }
+    select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
