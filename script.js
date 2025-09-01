@@ -117,7 +117,9 @@ document.addEventListener('DOMContentLoaded', () => {
             'kilogram_force': { name: '千克力', symbol: 'kgf', factor: 9.80665 }
         },
         'torque': {
-            'newton_meter': { name: '牛米', symbol: 'N·m', factor: 1 },
+            'newton_meter': { name: '牛顿米', symbol: 'N·m', factor: 1 },
+            'kilogram_force_meter': { name: '千克力米', symbol: 'kgf·m', factor: 9.80665 },
+            'kilogram_force_centimeter': { name: '千克力厘米', symbol: 'kgf·cm', factor: 0.0980665 },
             'pound_foot': { name: '磅英尺', symbol: 'lbf·ft', factor: 1.35582 },
             'pound_inch': { name: '磅英寸', symbol: 'lbf·in', factor: 0.112985 }
         }
